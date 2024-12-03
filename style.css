@@ -1,0 +1,229 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: BungeeShade;
+    src: url(Media/BungeeShade-Regular.ttf);
+}
+@font-face {
+    font-family: Exo2;
+    src: url(Media/Exo2-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: HindMedium;
+    src: url(Media/HindSiliguri-Medium.ttf);
+}
+@font-face {
+    font-family: HindRegular;
+    src: url(Media/HindSiliguri-Regular.ttf);
+}
+@font-face {
+    font-family: SourGummy;
+    src: url(Media/SourGummy-VariableFont_wdth\,wght.ttf);
+}
+
+@keyframes growth {
+    0% {font-size: 3vw; margin-bottom: 0%;}
+    100% {font-size: 3.05vw; margin-bottom: -0.05vw}
+}
+
+
+@keyframes wiggle {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(5deg);}
+    75% {transform: rotate(-5deg);}
+    100% {transform: rotate(0deg);}
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+#sideNav {
+    background-image: linear-gradient(to right,#c5acdb, white);
+    height: 100vh;
+    width: 20vw;
+    box-shadow: 0.5vw 0px 1vw 0px rgb(0 0 0/ 0.2);
+    border-bottom-right-radius: 10vw;
+}
+
+#logo {
+    width: 7.5vw;
+    border: solid black 0.25vw;
+    margin-top: 1.75vh;
+}
+
+#logoAndName {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+    gap: 0;
+}
+
+#navLinks {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5vw;
+}
+
+h1 {
+    font-size: 3vw;
+    text-align: left;
+    padding-right: 0.75vw;
+    padding-top: 1vh;
+    font-family: "BungeeShade";
+    color: #3a115d;
+}
+
+h2 {
+    margin-top: 10vh;
+    font-size: 3vw;
+    text-align: left;
+    padding-right: 0.75vw;
+    padding-top: 1vh;
+    font-family: Exo2;
+}
+h2:after {
+    content: "";
+    position: absolute;
+    left: 1.25vw;
+    right: 0px;
+    height: 3.85vw;
+    width: 5vw;
+    border-bottom: solid black 0.25vh;
+}
+h2:hover {
+    animation-name: growth;
+    animation-duration: 0.1s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 0);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#aboutContainer {
+    width: 65vw;
+    height: 75vh;
+    position: absolute;
+    left: 27.5vw;
+    top: 12.5vh;
+
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+
+#funImg {
+    height: 15vh;
+    margin-bottom: -0.3vh;
+}
+#funImg:hover {
+    animation-name: wiggle;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 0);
+    animation-iteration-count: infinite;
+}
+
+#aboutText {
+    background-color: white;
+    box-shadow: 0 0 2vw 0px rgb(0 0 0/ 0.4);
+    height: 39vw;
+
+    border: solid #25daa0 0.5vw;
+
+    display: grid;
+    grid-template-rows: 1fr 11fr;
+}
+#aboutTag {
+    font-size: 8vw;
+    padding: 0.75svw;
+    font-family: SourGummy;
+}
+#aboutContent {
+    padding: 0.75vw;
+    font-size: 3.5vw;
+    font-family: HindMedium;
+}
+
+#bioContent {
+    background-color: white;
+    width: 65vw;
+    height: 725vh;
+    position: absolute;
+    top: 0%;
+    left: 28vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h3 {
+    font-size: 2vw;
+    text-align: left;
+    padding-right: 0.75vw;
+    font-family: Exo2;
+    color: darkgray;
+}
+
+h4 {
+    font-size: 2.5vw;
+    text-align: left;
+    padding-right: 0.75vw;
+    font-family: Exo2;
+}
+
+.pictureRole {
+    margin: 2vw;
+    display: grid;
+    grid-template-rows: 0.75fr 0.75fr 12fr;
+}
+.bioText {
+    margin: 2vw;
+}
+p {
+    font-size: 1.25vw;
+    text-align: left;
+    padding-right: 0.75vw;
+    font-family: Exo2;
+    color: black;
+}
+
+/* Someone Else's code */
+
+.frame {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.fade {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,255));
+}
+
+/* Me Again */
+
+.portImage {
+    width: 30vw;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 0.3vh;
+    font-size: 1vw;
+    text-align: left;
+    font-family: Exo2;
+}
+
+h5 {
+    margin-top: 2vh;
+    font-size: 2.75vw;
+    text-align: left;
+    padding-right: 0.75vw;
+    font-family: Exo2;
+}
